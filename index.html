@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCKY - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <div class="header">
+                <h1>BLOCKY</h1>
+                <p>Welcome Back</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <span class="input-icon">✉️</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="input-icon">🔒</span>
+                    <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn google">
+                    <span>Google</span>
+                </button>
+                <button class="social-btn github">
+                    <span>GitHub</span>
+                </button>
+                <button class="social-btn discord">
+                    <span>Discord</span>
+                </button>
+            </div>
+
+            <div class="signup-link">
+                Don't have an account? <a href="#">Sign up here</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
