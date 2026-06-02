@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCKY - Todo List</title>
+    <link rel="stylesheet" href="todo-styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="todo-container">
+            <!-- Header -->
+            <div class="header">
+                <h1>📋 BLOCKY Todo</h1>
+                <p>Stay organized, stay productive</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        maxlength="50"
+                    >
+                    <span class="char-count"><span id="charCount">0</span>/50</span>
+                </div>
+                <div class="priority-section">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" class="priority-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button id="addBtn" class="add-btn">➕ Add Task</button>
+            </div>
+
+            <!-- Filters & Stats -->
+            <div class="controls-section">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button class="filter-btn" data-filter="high">High Priority</button>
+                </div>
+                <div class="stats">
+                    <span class="stat">Total: <strong id="totalCount">0</strong></span>
+                    <span class="stat">Completed: <strong id="completedCount">0</strong></span>
+                </div>
+            </div>
+
+            <!-- Todo List -->
+            <div class="todo-list" id="todoList">
+                <div class="empty-state">
+                    <p>🎯 No tasks yet. Add one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="clearCompletedBtn" class="action-btn clear">🗑️ Clear Completed</button>
+                <button id="clearAllBtn" class="action-btn danger">⚠️ Clear All</button>
+                <button id="exportBtn" class="action-btn export">📥 Export</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo-script.js"></script>
+</body>
+</html>
